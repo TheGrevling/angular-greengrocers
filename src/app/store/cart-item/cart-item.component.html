@@ -2,8 +2,8 @@
     <li>
         <img class="cart--item-icon" src="assets/icons/{{item.id}}.svg" alt="{{item.name}}" />
         <p>{{item.name}}</p>
-        <button class="quantity-btn remove-btn center">-</button>
+        <button class="quantity-btn remove-btn center" (click)="decreaseAmount(item)">-</button>
         <span class="quantity-text center">{{item.amount}}</span>
-        <button class="quantity-btn add-btn center">+</button>
+        <button class="quantity-btn add-btn center" (click)="increaseAmount(item)">+</button>
     </li>
 </ng-template>
