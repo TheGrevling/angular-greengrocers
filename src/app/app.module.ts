@@ -8,10 +8,11 @@ import { CartListComponent } from './store/cart-list/cart-list.component';
 import { CartItemComponent } from './store/cart-item/cart-item.component';
 import { CommonModule } from '@angular/common';
 import { TotalComponent } from './store/total/total.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, StoreListComponent, StoreItemComponent, CartListComponent, CartItemComponent, TotalComponent],
-  imports: [BrowserModule, HttpClientModule, CommonModule],
+  imports: [BrowserModule, HttpClientModule, CommonModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

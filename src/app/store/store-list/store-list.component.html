@@ -1,3 +1,8 @@
+<select id="filter" (change)="filterItems()" [(ngModel)]="filter">
+    <option value="all">All</option>
+    <option value="fruit">Fruit</option>
+    <option value="vegetable">Vegetable</option>
+  </select>
 <ul class="item-list store--item-list">
     <app-store-item *ngFor="let item of store | async" [item]="item" (addToCart)="addItem($event)"> </app-store-item> 
 </ul>

@@ -11,10 +11,21 @@ export class StoreListComponent {
   constructor(
     private readonly storeAppService: StoreappService,
   ) { }
-
+  
+  filter: string = "all";
   store = this.storeAppService.store
 
   addItem(item: Item){
     this.storeAppService.addToCart(item)
+  }
+
+  filterItems() {
+    if (this.filter === 'all') {
+      // If filter is 'all', show all items
+      this.store = this.storeAppService.store;
+    } else {
+      // Filter items based on the selected filter
+      this.store = this.storeAppService.store.filter((item:any) => item.type === this.filter);
+    }
   }
 }
