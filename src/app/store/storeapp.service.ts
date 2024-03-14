@@ -8,7 +8,6 @@ import { CartItem, Item } from '../models/item';
   providedIn: 'root'
 })
 export class StoreappService {
-  private URL = "https://boolean-api-server.fly.dev/groceries"
   store : any;
   cart: CartItem[] = [];
   http = inject(HttpClient)
